@@ -1,0 +1,490 @@
+:root {
+  --background-color: #ECEFF1; /* Cool Light Gray */
+  --primary-color: #CFD8DC;    /* Soft Gray */
+  --secondary-color: #90A4AE;  /* Muted Blue Gray */
+  --accent-color: #546E7A;     /* Dark Blue Gray */
+  --text-color: #37474F;       /* Almost Black */
+}
+
+body {
+  font-family: 'Poppins', 'Inter', 'Roboto', sans-serif;
+  margin: 0;
+  padding:10px;
+  box-sizing: border-box;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+p {
+  margin: 0;
+  color: var(--accent-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*  Hero Section Styles with Animations*/
+@media only screen and (min-width: 1440px){
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 100px 20px;
+  background-image: url('https://cdni.iconscout.com/illustration/premium/thumb/bill-payment-illustration-download-in-svg-png-gif-file-formats--online-digital-method-money-whoooa-solid-1-pack-people-illustrations-3779127.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size:contain;
+
+  background-color: white;
+  color: var(--text-color);
+  height: fit-content;
+  animation: fadeInBackground 2s ease-in-out;
+}
+
+}
+
+.hero-section-content {
+  width: 60%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: slideUp 1.5s ease-in-out;
+}
+
+.hero-section h1 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.hero-section p {
+  font-size: 2.6rem;
+  margin-bottom: 30px;
+  color: var(--accent-color);
+  width: 100%;
+}
+
+.hero-section-content button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  border: 4px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+/* Keyframes for Animations */
+@keyframes fadeInBackground {
+  from { opacity: 0; background-position: left center; }
+  to { opacity: 1; background-position: right center; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 1440px) {
+  .hero-section{
+    background-image: url('https://cdni.iconscout.com/illustration/premium/thumb/bill-payment-illustration-download-in-svg-png-gif-file-formats--online-digital-method-money-whoooa-solid-1-pack-people-illustrations-3779127.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  /* background-size:contain; */
+  }
+  .hero-section-content{
+    width:70%;
+  }
+  .hero-section h1 {
+    font-size: 3.5rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.8rem;
+    
+
+    width: 100%;
+  }
+  
+  
+}
+@media only screen and (max-width: 1120px) {
+
+  
+  .hero-section {
+    background-position: bottom;
+    background-size:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+            
+  }
+  .hero-section-content {
+    width: 100%;
+    text-align: center;
+    font-size: smaller;
+    margin-bottom: 40%;
+  
+   
+    padding: 20px;
+    
+  }
+  .hero-section-content {
+    width: 100%;
+    text-align: center;
+    /* font-size: 1.2rem; */
+  }
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .hero-section p {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  .hero-section-content button {
+    font-size: 2rem;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: 4px solid black;
+  }
+}
+/* button css */
+
+button {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  border: 2px solid black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
+}
+/* Good-looking CSS with the same color scheme */
+.features-sectoin {
+  text-align: center;
+  padding: 5px 20px;
+  background-color: var(--primary-color);
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:baseline;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.features-sectoin h2 {
+  font-size: 2.6rem;
+  margin-top: 50px;
+  color: var(--text-color);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.features-section-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); */
+}
+
+.features-section-card div {
+  flex: 1 1 1 250px;
+  max-width: 400px;
+  height:500px;
+  background-color: var(--background-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  /* transition: transform 0.4s ease, box-shadow 0.4s ease; */
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.features-section-card div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.features-section-card img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 100%;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1));
+  /* filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1)); */
+  transition: transform 0.4s ease;
+}
+
+.features-section-card h3 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+  color: var(--heading-color);
+  font-weight: 600;
+}
+
+.features-section-card p {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.pricing-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+  background-color: var(--background-color);
+  gap: 35px;
+  text-align: center;
+}
+
+.pricing-section h2 {
+  width: 100%;
+  font-size: 2.6rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.pricing-section div {
+  flex: 1;
+  max-width: 360px;
+  padding: 30px;
+  background-color: var(--primary-color);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 4px solid var(--accent-color);
+}
+
+.pricing-section div:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.pricing-section h3 {
+  font-size: 2.4rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.pricing-section p {
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.pricing-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.pricing-section li {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 8px;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+}
+
+.pricing-section button {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.pricing-section button:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 1200px) {
+  .pricing-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding-right: 10px; */
+  }
+
+  .pricing-section  div {
+    width: 80%;
+    margin: 10px 0;
+    
+  }
+}
+
+
+/* Testimonial */
+
+.testimonials-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 80px 20px;
+  background-color: var(--primary-color);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.testimonial-card {
+  display: flex;
+  align-items: center;
+  background: var(--background-color);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 80%;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+}
+
+
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  background-color:  var(--primary-color);
+  border: 3px solid var(--accent-color);
+  position: relative;
+  z-index: auto;
+}
+.testimonial-card img:hover{
+  transform: scale(3);
+  z-index: 20;
+}
+.testimonial-content {
+  flex: 1;
+}
+
+.testimonial-content h4 {
+  font-size: 2.4rem;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.testimonial-content p {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .testimonial-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .testimonial-card img {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+}
+/* Footer */
+
+.footer{
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  padding: 40px 20px;
+  padding-bottom: 5px;
+
+}
+
+.footer-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 18px;
+  /* background-color: black;
+  color: white ; */
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  /* color: white; */
+  text-decoration: none;
+  /* font-weight: bold; */
+  /* transition: color 0.3s ease-in-out; */
+}
+
+
+
+.footer p{
+  text-align: center;
+  color: var(--background-color);
+  font-size: 18px;
+}
+
+/* .footer-contact-info{
+  background-color: var(--accent-color);
+  color: var(--background-color);
+} */
